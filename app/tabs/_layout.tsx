@@ -1,6 +1,6 @@
-import NavBar from '@/components/navbar';
-import AntDesign from '@expo/vector-icons/AntDesign';
+
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Tabs } from "expo-router";
 
 export default function RootLayout() {
@@ -13,9 +13,7 @@ export default function RootLayout() {
     
     screenOptions={{
       tabBarActiveBackgroundColor:'#4AE176',
-      tabBarItemStyle:{
-        borderRadius:20,
-      } ,
+  
     
       headerShown:false,
       
@@ -24,6 +22,7 @@ export default function RootLayout() {
       tabBarStyle:{
         backgroundColor:'#5F5E5E',
         borderTopWidth:0,
+        
         
         elevation:0,
 
@@ -52,11 +51,11 @@ export default function RootLayout() {
       }}/>
       
       <Tabs.Screen
-      name="historique"
+      name="profile"
       options={{
-        title:"Historique",
+        title:"Profile",
         tabBarIcon:({color , size}) =>(
-          <AntDesign name="history" size={24} color="black" />
+         <MaterialCommunityIcons name="face-man-profile" size={24} color="black" />
         ),
       }}/>
 
